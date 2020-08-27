@@ -49,11 +49,6 @@ AK_API void akSetSeed(unsigned int);
 #import <Foundation/Foundation.h>
 #import <vector>
 
-/**
- Base class for DSPKernels. Many of the methods are virtual, because the base AudioUnit class
- does not know the type of the subclass at compile time.
- */
-
 class AKDSPBase {
     
     std::vector<const AVAudioPCMBuffer*> internalBuffers;
