@@ -2,7 +2,7 @@
 
 import Foundation
 import Accelerate
-import CAudioKit
+import EZAudio
 
 /// FFT Calculation for any node
 open class AKFFTTap: NSObject, EZAudioFFTDelegate {

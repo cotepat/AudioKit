@@ -25,9 +25,11 @@ let package = Package(
         .target(
             name: "STK",
             dependencies: []),
+        .target(name: "EZAudio",
+            dependencies: ["TPCircularBuffer"]),
         .target(
             name: "CAudioKit",
-            dependencies: ["TPCircularBuffer", "STK"],
+            dependencies: ["TPCircularBuffer", "STK", "EZAudio"],
             cSettings: [
                 .headerSearchPath("soundpipe/lib/dr_wav"),
                 .headerSearchPath("soundpipe/lib/faust"),
@@ -42,7 +44,6 @@ let package = Package(
                 .headerSearchPath("Sporth Custom Ugens"),
                 .headerSearchPath("AudioKitCore/Common"),
                 .headerSearchPath("Devoloop/include"),
-                .headerSearchPath("EZAudio/include"),
                 .headerSearchPath(".")
             ]
         ),
