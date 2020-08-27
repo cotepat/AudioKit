@@ -3,6 +3,7 @@
 import Foundation
 import AVFoundation
 import CAudioKit
+import soundpipe
 
 extension AKManager {
     // MARK: - Testing

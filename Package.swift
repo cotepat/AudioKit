@@ -27,21 +27,17 @@ let package = Package(
             dependencies: []),
         .target(name: "EZAudio",
             dependencies: ["TPCircularBuffer"]),
+        .target(name: "soundpipe",
+                cSettings: [.define("NO_LIBSNDFILE")]),
         .target(
             name: "CAudioKit",
-            dependencies: ["TPCircularBuffer", "STK", "EZAudio"],
+            dependencies: ["TPCircularBuffer", "STK", "EZAudio", "soundpipe"],
             cSettings: [
-                .headerSearchPath("soundpipe/lib/dr_wav"),
-                .headerSearchPath("soundpipe/lib/faust"),
-                .headerSearchPath("soundpipe/lib/inih"),
-                .headerSearchPath("soundpipe/lib/kissfft"),
-                .headerSearchPath("soundpipe/include"),
                 .headerSearchPath("sporth/include"),
                 .headerSearchPath("soundpipeextension/include"),
                 .define("NO_LIBSNDFILE")],
             cxxSettings: [
                 .headerSearchPath("CoreAudio"),
-                .headerSearchPath("Sporth Custom Ugens"),
                 .headerSearchPath("AudioKitCore/Common"),
                 .headerSearchPath("Devoloop/include"),
                 .headerSearchPath(".")
