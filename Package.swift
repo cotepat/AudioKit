@@ -39,7 +39,6 @@ let package = Package(
                 .headerSearchPath("soundpipeextension/include"),
                 .define("NO_LIBSNDFILE")],
             cxxSettings: [
-                .headerSearchPath("CoreAudio"),
                 .headerSearchPath("AudioKitCore/Common"),
                 .headerSearchPath("Devoloop/include"),
                 .headerSearchPath(".")
