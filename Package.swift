@@ -32,15 +32,15 @@ let package = Package(
         .target(name: "sporth",
                 dependencies: ["soundpipe"],
                 cSettings: [.define("NO_LIBSNDFILE")]),
+        .target(name: "Devoloop"),
         .target(
             name: "CAudioKit",
-            dependencies: ["TPCircularBuffer", "STK", "EZAudio", "soundpipe", "sporth"],
+            dependencies: ["TPCircularBuffer", "STK", "EZAudio", "soundpipe", "sporth", "Devoloop"],
             cSettings: [
                 .headerSearchPath("soundpipeextension/include"),
                 .define("NO_LIBSNDFILE")],
             cxxSettings: [
                 .headerSearchPath("AudioKitCore/Common"),
-                .headerSearchPath("Devoloop/include"),
                 .headerSearchPath(".")
             ]
         ),
