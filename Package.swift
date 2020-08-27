@@ -46,7 +46,7 @@ let package = Package(
         ),
         .target(
             name: "AudioKit",
-            dependencies: ["CAudioKit"]),
+            dependencies: ["CAudioKit", "EZAudio", "soundpipe"]),
         .testTarget(
             name: "AudioKitTests",
             dependencies: ["AudioKit"]),

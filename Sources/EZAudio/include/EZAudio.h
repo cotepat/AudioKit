@@ -38,7 +38,11 @@ FOUNDATION_EXPORT const unsigned char EZAudioVersionString[];
 #import "EZAudioPlayer.h"
 #import "EZAudioFileMarker.h"
 
+//------------------------------------------------------------------------------
+#pragma mark - UI
+//------------------------------------------------------------------------------
 
+#import "EZAudioPlot.h"
 
 //------------------------------------------------------------------------------
 #pragma mark - Utility Components
